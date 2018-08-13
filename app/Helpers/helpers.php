@@ -15,3 +15,13 @@ if (! function_exists('getTile')){
     }
 
 }
+if (! function_exists('getRouteName')){
+
+    function getRouteName($route){
+
+        return Route::is($route) ? 'active' : '';
+
+
+    }
+
+}

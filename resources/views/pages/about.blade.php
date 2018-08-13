@@ -1,5 +1,5 @@
 
-@extends('layouts.default')
+@extends('layouts.default' ,['title'=>'about'])
 
 @section('content')
 

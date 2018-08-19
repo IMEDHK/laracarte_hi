@@ -17,4 +17,5 @@ class PageController extends Controller
         return view('pages.about');
 
     }
+
 }

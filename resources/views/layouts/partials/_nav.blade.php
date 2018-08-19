@@ -28,7 +28,7 @@
                     </ul>
                 </li>
 
-                <li><a href="#">Contact</a></li>
+                <li class="{{ (getRouteName('contact_path') ) }}"><a href="{{ route('contact_path') }}">Contact</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">

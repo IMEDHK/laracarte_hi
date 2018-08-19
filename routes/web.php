@@ -18,6 +18,13 @@ Route::get('/about' ,
         'uses'=>'PageController@about'
 
     ]);
+
+Route::get('/contact' ,
+    [
+        'as'=>'contact_path',
+        'uses'=>'ContactsController@create'
+
+    ]);
 Route::get('/' ,
     [
         'as'=>'root_path',

@@ -12,6 +12,8 @@
 */
 
 
+use App\Mail\ContactMessageCreated;
+
 Route::get('/about' ,
     [
         'as'=>'about_path',
@@ -29,5 +31,15 @@ Route::get('/' ,
     [
         'as'=>'root_path',
         'uses'=>'PageController@home'
+
+    ]);
+Route::get('/testmail' , function (){
+    return new ContactMessageCreated('hakimi imed' ,'imedhkimi1@gmail.com','merci pour votre visite');
+});
+
+Route::post('/contact' ,
+    [
+        'as'=>'contact_path',
+        'uses'=>'ContactsController@store'
 
     ]);

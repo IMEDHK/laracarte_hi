@@ -2,7 +2,8 @@
 namespace App\Http\Controllers;
 use App\Http\Requests\StoreFormContact;
 use App\Mail\ContactMessageCreated;
-use App\Models\Message;
+
+use App\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 class ContactsController extends Controller

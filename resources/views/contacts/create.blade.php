@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2 col-sm-9 col-sm-offset-2">
             <h4>Get in touch <a href="mailto:{{config('laracarte.admin_support_email')}}" class="text-muted"click here>click for help</a></h4>
-            <form action="{{route('contact_path')}}" method="post" >
+            <form action="{{route('contact_path')}}" method="post"  enctype="multipart/form-data">
                 @csrf
                 <div class="form-group {{$errors->has('name')? 'has-error' : '' }}">
                     <label for="name" class="control-label">Name</label>
@@ -26,6 +26,9 @@
                <textarea class="form-control" rows="10" cols="10" required="required" name="message" id="message" value="{{old('message')}}"> </textarea>
                     {!!  $errors->first('message','<span class="help-block">:message</span>') !!}
 
+                </div>
+                <div class="form-group">
+                   <input type="file" name="file" id="file">
                 </div>
                 <div class="form-group">
                    <button class="btn btn-primary btn-block"> Submit</button>

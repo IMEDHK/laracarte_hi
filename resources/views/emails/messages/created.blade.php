@@ -8,6 +8,7 @@ Button Text
 @endcomponent
 {{ $msg->email }}
 {{ $msg->message}}
+{{ $msg->file}}
 Thanks,<br>
 {{ config('app.name') }}
 @endcomponent

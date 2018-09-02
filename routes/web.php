@@ -33,6 +33,19 @@ Route::get('/' ,
         'uses'=>'PageController@home'
 
     ]);
+
+Route::post('/comment' ,
+    [
+        'as'=>'comment_path',
+        'uses'=>'CommentController@store'
+
+    ]);
+Route::get('/comments' ,
+    [
+        'as'=>'comment_path',
+        'uses'=>'CommentController@index'
+
+    ]);
 Route::get('/testmail' , function (){
     return new ContactMessageCreated('hakimi imed' ,'imedhkimi1@gmail.com','merci pour votre visite');
 });

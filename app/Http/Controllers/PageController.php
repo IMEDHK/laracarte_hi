@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Comment;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     public function home(){
-        return view('pages.home');
+        $comments=Comment::all();
+        return view('pages.home',compact('comments'));
 
     }
 

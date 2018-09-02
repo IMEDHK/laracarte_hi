@@ -16,6 +16,8 @@ window.Vue = require('vue');
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('password-input', require('./components/PasswordInput.vue'));
+Vue.component('comment-form', require('./components/CommentForm.vue'));
 
 const app = new Vue({
     el: '#app'

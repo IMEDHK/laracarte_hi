@@ -1,0 +1,28 @@
+runtime: php
+env: flex
+
+runtime_config:
+  document_root: public
+
+# Ensure we skip ".env", which is only for local development
+skip_files:
+- .env
+
+env_variables:
+  # Put production environment variables here.
+  APP_LOG: errorlog
+  APP_KEY: base64:QkDav/WwRL73+4gvjc6VgEnCmDJiAqRlqLa9bPHzUSI=
+  STORAGE_DIR: /tmp
+  CACHE_DRIVER: database
+  SESSION_DRIVER: database
+  ## Set these environment variables according to your CloudSQL configuration.
+  DB_HOST: 35.233.42.121
+  DB_DATABASE: laravelvuejs
+  DB_USERNAME: hakimi
+  DB_PASSWORD: azerty
+  DB_SOCKET: "/cloudsql/vuejslaraveldeploy-215213:europe-west1:laravelvusjsdeploysql"
+
+beta_settings:
+  # for Cloud SQL, set this value to the Cloud SQL connection name,
+  # e.g. "project:region:cloudsql-instance"
+  cloud_sql_instances: "vuejslaraveldeploy-215213:europe-west1:laravelvusjsdeploysql"
